@@ -1,0 +1,326 @@
+    /* Fonts  */
+
+    @font-face {
+        font-family: alexBrush-Regular;
+        src: url('../Assets//Fonts//AlexBrush-Regular.ttf');
+      }
+    
+      @font-face {
+        font-family: amatic-Regular;
+        src: url('../Assets//Fonts///Amatic-Regular.ttf');
+      }
+
+      @font-face {
+        font-family: amatic-Bold;
+        src: url('../Assets//Fonts//Amatic-Bold.ttf');
+      }
+
+      @font-face {
+        font-family: montserrat-Medium;
+        src: url('../Assets//Fonts//Montserrat-Medium.otf');
+      }
+    
+      @font-face {
+        font-family: montserrat-Regular;
+        src: url('../Assets//Fonts//Montserrat-Regular.otf');
+      }
+
+
+    /* Default *---------------- */
+
+    html{
+        font-family: montserrat-Regular;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    /*structure *------------------------------- */
+
+    /* navigation bar  */
+
+    /* flexbox is used here to align items  */
+    nav{
+        height: 20vh;
+        background-color: #efd3b8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ol{
+        margin: 0;
+        padding: 0;
+        width: 40%;
+         /* here font family is overwritten */
+        font-family: amatic-Bold;
+    }
+
+    /* inline display property is used to order nav elements  */
+    nav ol li{
+       display: inline;
+       font-size: 3.8vh;
+    }
+
+    nav ol li a{
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 0 0.8vw;
+    }
+
+    /* here we are targeting 
+
+    /* this is a pseudo class */
+    nav ol li a:hover{
+        opacity: 0.6;
+    }
+
+    nav ol li a:active{
+    text-decoration: underline;
+    }
+
+    .logo{
+        /* here font family is overwritten */
+        font-family: alexBrush-Regular;
+        text-transform: capitalize;
+        font-size: 8vh;
+    }
+    .logo a{
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .nav-socialMediaIcons {
+        width: 40%;
+        text-align: right;
+    }
+
+    .nav-socialMediaIcons img{
+        height: 3.2vh;
+        padding: 0 0.5vw;
+        cursor: pointer;
+    }
+
+    /* this is a pseudo class */
+    .nav-socialMediaIcons img:hover{
+        opacity: 0.6;
+    }
+
+    /*header *--------------- */
+
+    header{
+        height: 80vh;
+        /* Photo by <a href="https://unsplash.com/@victoriakosmo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Victoria Shes</a> on <a href="https://unsplash.com/images/food?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  */
+        background-image: url('../Assets//Images/homePage/headerImage.jpg');
+        background-position: center;
+         background-size: cover;
+    }
+
+    /*main section*--------------- */
+
+    main{
+        padding: 20px;
+    }
+
+    section{
+        width: 90%;
+        margin: 60px auto;
+    }
+
+    section .section-heading{
+        width: 90%;
+        margin: 50px auto;
+        font-family: amatic-Bold;
+        font-size: 9vh;
+    }
+
+    section h4{
+        margin: 40px auto;
+    }
+
+    /* cta menu section  ----------*/
+
+    /* this css class is used in addition to section css properties  */
+    .menuCta{
+        height: 70vh;
+        /* Photo by <a href="https://unsplash.com/@jaywennington?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jay Wennington</a> on <a href="https://unsplash.com/photos/N_Y88TWmGwA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  */
+        background-image: url('../Assets//Images/homePage/ctaImage.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+
+    .menuCta-wrapper{
+        background-color: #00000058;
+        display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         width: 100%;
+         height: 100%;
+    }
+
+    .menuCta .menuCta-heading{
+        font-family:amatic-Bold;
+        color: rgb(255, 255, 255);
+        font-size: 12vh;
+    }
+
+    .menuCta button{
+        border: 2px solid white;
+        border-radius: 2px;
+        margin-top: 5vh;
+        padding: 2vh;
+        width: 20vw;
+        background-color: #22222200;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .menuCta button:hover{
+        background-color: #c9c9c921;
+    }
+    
+    
+    /* items - menu & drink section  *------------------------ */
+
+    .items{
+        margin: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5vh 0;
+    }
+
+    .items-heading{
+        font-family: amatic-Bold;
+        font-size: 8vh;
+        padding-bottom: 3vh;
+    }
+
+    .items-container{
+        /* grid used to display menu components  */
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 100%;
+        padding-top: 4vh;
+    }
+
+    .items-container div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #efd3b8;
+        width: 30vw;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .items-container div img{
+       height: 40vh;
+       width: 100%;
+       text-align: center;
+    }
+
+     .items-container div h3{
+        height: 4vh;
+     }
+
+     .items-container div span{
+        height: 5vh;
+        font-size: 2vh;
+        text-overflow: ellipsis;
+        width: 90%;
+        padding-bottom: 5vh;
+     }
+
+
+  /* contact us  *------------------------ */
+
+    .contact-us{
+        margin: 9vh;
+        padding-left: 7vw;
+    }
+
+    .form{
+        display: flex;
+    }
+
+    label{
+        /* inline block layout technique is being used here   */
+        display: inline-block;
+        width: 10vw;
+        margin-top: 4vh;
+    }
+
+    input{
+        height: 6vh;
+        min-width: 24vw;
+        border:1px solid  #22222279;
+    }
+
+    #message{
+        margin-top: 4vh;
+        border:1px solid  #22222279;
+        min-width: 24vw;
+    }
+
+    .form-button{
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 2px;
+        margin-top: 8vh;
+        height: 7vh;
+        font-size: 3.4vh;
+        background-color: #22222200;
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        cursor: pointer;
+        font-family:amatic-Bold;
+    }
+
+    .form-button:hover{
+        background-color: #c9c9c921;
+    }
+
+
+    /* Footer *------------------------ */
+
+    footer {
+        height: 40vh;
+        display: flex;
+        background-color: #efd3b8;
+        padding: 5vh;
+        justify-content: space-between;
+    }
+
+    /* overwrites font size of logo  */
+    .footer-logo{
+        font-size: 7vh;
+    }
+
+    .location-wrapper{
+       width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .location-container{
+        padding-right: 2vw;
+        width: 21%;
+    }
+
+    .location-heading{
+        font-family: montserrat-Medium;
+        padding-bottom: 2vh;
+    }
+
+    .location-info, .location-postCode{
+        font-size: 2.5vh;
+    }
+    
+    .location-postCode{
+        padding-top: 1vh;
+    }
